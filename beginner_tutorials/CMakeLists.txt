@@ -166,7 +166,8 @@ include_directories(
 
 # Add python script
 catkin_install_python(PROGRAMS 
-  scripts/00_exampleTalker.py scripts/01_exampleListener.py
+  scripts/00_exampleTalker.py scripts/01_exampleListener.py 
+  scripts/10_exampleServiceServer.py scripts/11_exampleServiceClient.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
