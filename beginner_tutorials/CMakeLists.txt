@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  roslaunch
 )
 
 ## System dependencies are found with CMake's conventions
@@ -26,6 +27,8 @@ find_package(catkin REQUIRED COMPONENTS
 # catkin_install_python(PROGRAMS scripts/test
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
+# Check launch files for errors
+roslaunch_add_file_check(launch)
 # Install launch files
 install(DIRECTORY launch/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
