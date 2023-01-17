@@ -57,7 +57,7 @@ install(DIRECTORY launch/
 # Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  Test.msg
+  TestMsg.msg
   # Message1.msg
   # Message2.msg
 )
@@ -65,7 +65,7 @@ add_message_files(
 # Generate services in the 'srv' folder
 add_service_files(
   FILES
-  Test.srv
+  TestSrv.srv
   # Service1.srv
   # Service2.srv
 )
