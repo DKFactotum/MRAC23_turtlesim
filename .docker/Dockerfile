@@ -11,6 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV TERM xterm-256color
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
+    wget \
     ssh \
     git \
     curl \
