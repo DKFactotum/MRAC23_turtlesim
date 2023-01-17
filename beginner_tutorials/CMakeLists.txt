@@ -23,10 +23,6 @@ find_package(catkin REQUIRED COMPONENTS
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
 # catkin_python_setup()
 
-# # Add python script
-# catkin_install_python(PROGRAMS scripts/test
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-
 # Check launch files for errors
 roslaunch_add_file_check(launch)
 # Install launch files
@@ -164,6 +160,13 @@ include_directories(
 #############
 ## Install ##
 #############
+
+# Add python script
+catkin_install_python(PROGRAMS 
+  scripts/00_exampleTalker.py scripts/01_exampleListener.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
