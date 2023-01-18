@@ -19,6 +19,7 @@
 		"streetsidesoftware.code-spell-checker",
 		"twxs.cmake",
 		"VisualStudioExptTeam.intellicode-api-usage-examples",
-		"VisualStudioExptTeam.vscodeintellicode"
+		"VisualStudioExptTeam.vscodeintellicode",
+		"ms-vscode.cmake-tools"
 	]
 }
