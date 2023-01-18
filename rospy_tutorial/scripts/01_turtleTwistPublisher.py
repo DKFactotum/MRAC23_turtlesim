@@ -4,25 +4,26 @@ import sys
 
 import rospy
 from geometry_msgs.msg import Twist, Vector3
-from turtlesim.msg import Pose
+
+# from turtlesim.msg import Pose
 
 
-def publishTurtlesimPose(lv, av):
-    publisher = rospy.Publisher('/turtle1/pose', Pose)
-    rospy.init_node('turtle_twistpose_publisher', anonymous=True)
-    rate = rospy.Rate(10)  # 10hz
-    data = Pose()
-    data.linear_velocity = lv
-    data.angular_velocity = av
-    while not rospy.is_shutdown():
-        rospy.loginfo(
-            'Publishing Turtle Pose by linear and angular components')
-        publisher.publish(data)
-        rate.sleep()
+# def publishTurtlesimPose(lv, av):
+#     publisher = rospy.Publisher('/turtle1/pose', Pose)
+#     rospy.init_node('turtle_twistpose_publisher', anonymous=True)
+#     rate = rospy.Rate(10)  # 10hz
+#     data = Pose()
+#     data.linear_velocity = lv
+#     data.angular_velocity = av
+#     while not rospy.is_shutdown():
+#         rospy.loginfo(
+#             'Publishing Turtle Pose by linear and angular components')
+#         publisher.publish(data)
+#         rate.sleep()
 
 
 def publishTwist(lx, ly, lz, ax, ay, az):
-    publisher = rospy.Publisher('/turtle1/twist', Twist)
+    publisher = rospy.Publisher('/turtle1/cmd_vel', Twist)
     rospy.init_node('turtle_twist_publisher', anonymous=True)
     rate = rospy.Rate(10)  # 10hz
     data = Twist()
@@ -35,11 +36,12 @@ def publishTwist(lx, ly, lz, ax, ay, az):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) == 3:
-        lv = float(sys.argv[1])
-        av = float(sys.argv[2])
-        publishTurtlesimPose(lv, av)
-    elif len(sys.argv) == 7:
+    # if len(sys.argv) == 3:
+    #     lv = float(sys.argv[1])
+    #     av = float(sys.argv[2])
+    #     publishTurtlesimPose(lv, av)
+    # elif
+    if len(sys.argv) == 7:
         lx = float(sys.argv[1])
         ly = float(sys.argv[2])
         lz = float(sys.argv[3])
